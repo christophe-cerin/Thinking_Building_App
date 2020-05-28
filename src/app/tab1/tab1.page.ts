@@ -42,6 +42,7 @@ import {
 import {
     File
 } from '@ionic-native/file/ngx';
+
 @Component({
     selector: 'app-tab1',
     templateUrl: 'tab1.page.html',
@@ -55,7 +56,7 @@ export class Tab1Page {
     private database: SQLiteObject;
     Rhttp: number;
 
-    constructor(private sqlite: SQLite, private geolocation: Geolocation, private alertController: AlertController, private platform: Platform, private sensors: Sensors, private sensors1: Sensors, private dbMeter: DBMeter, private batteryStatus: BatteryStatus, private gyroscope: Gyroscope) {
+    constructor(private sqlite: SQLite, private geolocation: Geolocation, private alertController: AlertController, private platform: Platform, private sensors: Sensors, private sensors1: Sensors, private dbMeter: DBMeter, private batteryStatus: BatteryStatus, private gyroscope: Gyroscope, private http: HTTP) {
         this.startDb();
         this.initializeDatabase();
         this.startBattery();
@@ -83,7 +84,7 @@ Ce site internet est normalement accessible à tout moment aux utilisateurs. Une
             console.log('Error getting location', error);
             this.errorAlert();
         });
-        const loca = [loc.coords.latitude, loc.coords.longitude];
+        const loca = [loc['coords'].latitude, loc['coords'].longitude];
         return loca;
     }
 
@@ -175,7 +176,7 @@ Ce site internet est normalement accessible à tout moment aux utilisateurs. Une
     async startGyroscope() {
 
         const orientation = await Promise.resolve(this.gyroscope.getCurrent()).catch(error => console.log(error));
-        var gyro = [orientation.x, orientation.y, orientation.z];
+        var gyro = [orientation["x"], orientation["y"], orientation["z"]];
         return gyro
     }
 
@@ -260,8 +261,9 @@ Ce site internet est normalement accessible à tout moment aux utilisateurs. Une
                     ch = ch + "capteurs lux=\"" + rs.rows.item(i).lux + "\",celsius=\"" + rs.rows.item(i).celsius + "\",decibel=\"" + rs.rows.item(i).decibel + "\",localisation=\"" + rs.rows.item(i).localisation + "\",batterie=\"" + rs.rows.item(i).batterie + "\",gyroscope=\"" + rs.rows.item(i).gyroscope + "\" " + rs.rows.item(i).temp*1000000 + "\n";
                     i = i + 1;
                 }
-                cordova.plugin.http.setDataSerializer('utf8');
-                cordova.plugin.http.post('http://ec2-34-242-18-0.eu-west-1.compute.amazonaws.com:8086/write?db=dataEnv', ch
+
+                this.http.setDataSerializer('utf8');
+                this.http.post('http://ec2-34-242-18-0.eu-west-1.compute.amazonaws.com:8086/write?db=dataEnv', ch
                 , {
                     Authorization: 'OAuth2: token'
                 },function(response) {

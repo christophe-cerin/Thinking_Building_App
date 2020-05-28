@@ -22,10 +22,23 @@ import { FieldType, InfluxDB, toNanoDate } from 'influx/lib/src';
 import { HTTP } from '@ionic-native/http/ngx';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { HttpModule } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
+  imports: [
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule,
+    FormsModule,
+    HttpModule,
+    
+  ],
+  
   providers: [
 
     Sensors,
@@ -44,7 +57,8 @@ import { File } from '@ionic-native/file/ngx';
     SQLite,
     HTTP,
     SQLitePorter,
-    File
+    File,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })

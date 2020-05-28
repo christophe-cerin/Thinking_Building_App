@@ -72,7 +72,7 @@ export class Tab2Page {
       const loc = await this.geolocation.getCurrentPosition().catch((error) => {
         console.log('Error getting location', error);
       });
-      const loca = [loc.coords.latitude, loc.coords.longitude];
+      const loca = [loc["coords"].latitude, loc["coords"].longitude];
       return loca;
     }
 
@@ -103,7 +103,7 @@ export class Tab2Page {
 
   async getGyro() {
     const orientation = await Promise.resolve(this.gyroscope.getCurrent()).catch(error => console.log(error));
-    var gyro = [orientation.x, orientation.y, orientation.z];
+    var gyro = [orientation["x"], orientation["y"], orientation["z"]];
     return gyro
   }
 
