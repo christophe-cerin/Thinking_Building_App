@@ -24,9 +24,6 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
-
-
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -36,6 +33,7 @@ import { HttpClient } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpModule,
+    
     
   ],
   

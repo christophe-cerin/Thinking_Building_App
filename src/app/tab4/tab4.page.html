@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-title>
+      QR Code
+   </ion-title>
+</ion-header>
+
+<ion-content>
+    <ion-item lines="none">
+        <ion-label><b>Nom:</b></ion-label>
+        <ion-input [(ngModel)]="nomUtilisateur" placeholder="Entrez votre nom"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+        <ion-label><b>Prenom:</b></ion-label>
+        <ion-input [(ngModel)]="prenomUtilisateur" placeholder="Entrez votre prenom"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+        <ion-label><b>Age:</b></ion-label>
+        <ion-input [(ngModel)]="ageUtilisateur" placeholder="Entrez votre age"></ion-input>
+    </ion-item>
+
+    <ion-button color="tertiary" expand="block" (click)="createQRCode()" *ngIf="!showCamera">
+        <ion-icon slot="start" name="create"></ion-icon>
+        Créer un QR Code
+    </ion-button>
+
+    <div class="center" *ngIf="myAngularxQrCode">
+        <qrcode [qrdata]="myAngularxQrCode" [size]="500" [level]="'M'"></qrcode>
+    </div>
+
+</ion-content>

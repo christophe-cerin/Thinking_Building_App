@@ -4,6 +4,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { TimeInterval } from 'rxjs';
 import { OpenNativeSettings } from '@ionic-native/open-native-settings/ngx';
 
+
 //import { Sensors } from '@ionic-native/sensors'
 
 @Component({
@@ -12,7 +13,6 @@ import { OpenNativeSettings } from '@ionic-native/open-native-settings/ngx';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-
   var:any;
   constructor(private geolocation: Geolocation,private openNativeSettings: OpenNativeSettings) {}
 
@@ -63,7 +63,5 @@ export class Tab3Page {
   // temperate(){
   //   this.temperature = this.sensors.enableSensor(SensorsOriginal.TYPE_AMBIENT_TEMPERATURE);
   // }
-
-
   
 }

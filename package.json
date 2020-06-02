@@ -40,6 +40,7 @@
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "angular-svg-round-progressbar": "^3.0.1",
+    "angularx-qrcode": "^2.1.1",
     "cordova": "^9.0.0",
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
@@ -62,7 +63,9 @@
     "core-js": "^2.6.11",
     "express": "^4.17.1",
     "influx": "^5.5.1",
+    "ionic-angular": "^3.9.10",
     "moment": "^2.26.0",
+    "ngx-qrcode2": "^9.0.0",
     "phonegap-plugin-barcodescanner": "^8.1.0",
     "phonegap-plugin-multidex": "^1.0.0",
     "phonegap-plugin-push": "^2.3.0",
@@ -107,9 +110,7 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "phonegap-plugin-barcodescanner": {
-        "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      },
+      "phonegap-plugin-barcodescanner": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
