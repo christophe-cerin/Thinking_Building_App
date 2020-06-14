@@ -55,6 +55,7 @@ export class Tab1Page {
     battery: number;
     private database: SQLiteObject;
     Rhttp: number;
+    translateService: any;
 
     constructor(private sqlite: SQLite, private geolocation: Geolocation, private alertController: AlertController, private platform: Platform, private sensors: Sensors, private sensors1: Sensors, private dbMeter: DBMeter, private batteryStatus: BatteryStatus, private gyroscope: Gyroscope, private http: HTTP) {
         this.startDb();
@@ -319,7 +320,12 @@ Ce site internet est normalement accessible à tout moment aux utilisateurs. Une
         console.log("lux :" + lux, "gyro :" + gyro, "loc :" + loc, "deci :" + deci, "bat :" + bat, "time :" + time, "temp : " + temp);
     }
 
+    useFrench(){
+        this.translateService.use("fr")
+    }
 
-
+    useEnglish(){
+        this.translateService.use("en")
+    }
 
 }
