@@ -16,3 +16,11 @@
     text-align: center;
     font-weight: 100;
   }
+ 
+  ion-toolbar{
+    --ion-background-color: linear-gradient(to right, rgba(255,0,0,0),rgb(126,126,126));
+    border-width:1px;
+    border-style:outset;
+    border-color:black;
+  }
+  

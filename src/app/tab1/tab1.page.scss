@@ -2,6 +2,18 @@
   max-height: 35vh;
   overflow: hidden;
 }
-#img_Logo_up13{
+  
+#img_Logo_up13 {
   text-align: center;
+  
+}
+
+ion-content {
+  --ion-background-color: linear-gradient(to right, rgba(255,0,0,0),rgb(126,126,126));
+}
+ion-toolbar{
+  --ion-background-color: linear-gradient(to right, rgba(255,0,0,0),rgb(126,126,126));;
+  border-width:1px;
+    border-style:outset;
+    border-color:black;
 }

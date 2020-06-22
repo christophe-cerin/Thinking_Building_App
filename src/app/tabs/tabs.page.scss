@@ -1,1 +1,6 @@
-
+.bg_color{
+    background-color: black;
+}
+ion-tab-button {
+    --ion-background-color: linear-gradient(to right, rgba(255,0,0,0),rgb(126,126,126));
+}

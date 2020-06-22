@@ -1,13 +1,15 @@
-<ion-header>
+<ion-header [translucent]="true">
+    <ion-toolbar>
     <ion-title>
       QR Code
    </ion-title>
-    <ion-toolbar>
-        <ion-button (click)="Scan()" slot="end">
-            <ion-icon name="Bluetooth"></ion-icon>
-            <p>Scan</p>
-        </ion-button>
-    </ion-toolbar>
+   <ion-button (click)="Scan()" slot="end">
+    <ion-icon name="Bluetooth"></ion-icon>
+    <p>Scan</p>
+</ion-button>
+   
+</ion-toolbar>
+    
 </ion-header>
 
 <ion-content>
@@ -26,7 +28,7 @@
         <ion-input [(ngModel)]="ageUtilisateur" placeholder="Entrez votre age"></ion-input>
     </ion-item>
 
-    <ion-button color="tertiary" expand="block" (click)="createQRCode()" *ngIf="!showCamera">
+    <ion-button expand="block" (click)="createQRCode()" *ngIf="!showCamera">
         <ion-icon slot="start" name="create"></ion-icon>
         Créer un QR Code
     </ion-button>

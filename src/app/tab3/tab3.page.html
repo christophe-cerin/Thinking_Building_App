@@ -1,12 +1,12 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Test
+      Parametre et autres
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button expand="full" color="primary" (click)="accessibility('accessibility')">settings</ion-button>
-  <ion-button expand="full" color="primary" (click)="stopLocation()">Me localiser</ion-button>
+  <ion-button expand="full" (click)="accessibility('accessibility')">Parametre</ion-button>
+  <ion-button expand="full" (click)="stopLocation()">Me localiser</ion-button>
 </ion-content>  
