@@ -42,6 +42,7 @@ export class Tab2Page {
   lux: number;
   decibel: number;
   battery: number;
+  
 
   constructor(private barcodeScanner: BarcodeScanner, private sqlite: SQLite, private sensors: Sensors,private dbMeter: DBMeter, private sensors1: Sensors, private batteryStatus: BatteryStatus, private gyroscope: Gyroscope,private geolocation: Geolocation) {
     this.getDB();

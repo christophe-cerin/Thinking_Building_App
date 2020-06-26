@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Scanneur de Qr-Code
+      {{ 'tab2.title' | translate}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,7 +10,7 @@
   <div id="img_QRCode_top"><img src="./assets/img/QRCode_top.png"/></div>
   <ion-button id="button_scan" expand="full" (click)="scanCode()">
     <ion-icon name="qr-scanner"></ion-icon>
-    <p>&nbsp; Démarrer le scan</p>
+    <p>&nbsp; {{ 'tab2.scan' | translate}}</p>
   </ion-button>
 
   <div id="img_QRCode_bottom"><img src="./assets/img/QRCode_bottom.png"/></div>
@@ -23,10 +23,10 @@
     </ion-item>
     <ion-item lines="none">
       <ion-label>
-   • Approchez le téléphone d'un QR-code <br>
-   • Visez le code de tel sorte qu'il se trouve au centre du carré <br>
-   • Attendez un instant en restant immobile <br>
-   • Voila c'est fait ! <br>
+        {{ 'tab2.tuto1' | translate}} <br>
+        {{ 'tab2.tuto2' | translate}} <br>
+        {{ 'tab2.tuto3' | translate}} <br>
+        {{ 'tab2.tuto4' | translate}} <br>
       </ion-label>
     </ion-item>
   </ion-card>

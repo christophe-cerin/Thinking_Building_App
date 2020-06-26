@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
     <ion-title>
-      QR Code
+      {{ 'tab4.title' | translate }}
    </ion-title>
    <ion-button (click)="Scan()" slot="end">
     <ion-icon name="Bluetooth"></ion-icon>
@@ -14,23 +14,23 @@
 
 <ion-content>
     <ion-item lines="none">
-        <ion-label><b>Nom:</b></ion-label>
-        <ion-input [(ngModel)]="nomUtilisateur" placeholder="Entrez votre nom"></ion-input>
+        <ion-label><b>{{ 'tab4.nom' | translate }}</b></ion-label>
+        <ion-input [(ngModel)]="nomUtilisateur" placeholder="{{ 'tab4.url1' | translate }}"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
-        <ion-label><b>Prenom:</b></ion-label>
-        <ion-input [(ngModel)]="prenomUtilisateur" placeholder="Entrez votre prenom"></ion-input>
+        <ion-label><b>{{ 'tab4.prenom' | translate }}</b></ion-label>
+        <ion-input [(ngModel)]="prenomUtilisateur" placeholder="{{ 'tab4.url2' | translate }}"></ion-input>
     </ion-item>
 
     <ion-item lines="none">
-        <ion-label><b>Age:</b></ion-label>
-        <ion-input [(ngModel)]="ageUtilisateur" placeholder="Entrez votre age"></ion-input>
+        <ion-label><b>{{ 'tab4.age' | translate }}</b></ion-label>
+        <ion-input [(ngModel)]="ageUtilisateur" placeholder="{{ 'tab4.url3' | translate }}"></ion-input>
     </ion-item>
 
     <ion-button expand="block" (click)="createQRCode()" *ngIf="!showCamera">
         <ion-icon slot="start" name="create"></ion-icon>
-        Créer un QR Code
+        {{ 'tab4.bouton' | translate }}
     </ion-button>
 
     <div class="center" *ngIf="myAngularxQrCode">

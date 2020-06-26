@@ -8,7 +8,38 @@
       "langue":"Langage",
       "fra": "Français",
       "eng": "Anglais"
+    },
+    "tab2": {
+      "title": "Scanneur de Code Qr",
+      "scan":"Démarrer le scan",
+      "tuto1":" • Approchez le téléphone d'un code QR",
+      "tuto2":"• Visez le code de tel sorte qu'il se trouve au centre du carré",
+      "tuto3":"• Attendez un instant en restant immobile",
+      "tuto4":"• Voila c'est fait !" 
+    },
+    "tab3":{
+      "title": "Parametre et autres",
+      "parametre": "Parametre",
+      "localisation": "Me localiser"
+
+
+
+    },
+      "tab4":{
+        "title": "Code Qr",
+        "nom":"Nom:",
+        "prenom": "Prénom:",
+        "age":"Age:",
+        "url1":"Entrer votre nom",
+        "url2":"Entrer votre prénom",
+        "url3":"Entrer votre âge",
+        "bouton":"Créer un code QR"
+  
+              
+     
+
+      
     }
-    
- 
+  
+     
   }

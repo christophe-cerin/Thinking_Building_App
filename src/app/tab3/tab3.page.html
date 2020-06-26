@@ -1,12 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Parametre et autres
+      {{ 'tab3.title' | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button expand="full" (click)="accessibility('accessibility')">Parametre</ion-button>
-  <ion-button expand="full" (click)="stopLocation()">Me localiser</ion-button>
+  <ion-button expand="full" (click)="accessibility('accessibility')">{{ 'tab3.parametre' | translate }}</ion-button>
+  <ion-button expand="full" (click)="stopLocation()">{{ 'tab3.localisation' | translate }}</ion-button>
 </ion-content>  

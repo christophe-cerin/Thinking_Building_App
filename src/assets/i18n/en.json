@@ -8,5 +8,34 @@
       "langue":"Language",
       "fra": "French",
       "eng": "English"
+      
+    },
+    "tab2": {
+      "title": "Qr Code scanner",
+      "scan":"Start scan",
+      "tuto1":" • Approach the phone with your QR-code",
+      "tuto2":"• Place the code at the center of the square",
+      "tuto3":"• Wait a moment while holding the phone still",
+      "tuto4":"• There you have it !" 
+    },
+    "tab3":{
+      "title": "Parameter and other",
+      "parametre": "Parameter",
+      "localisation": "Locate me"
+
+
+
+    },
+    "tab4":{
+      "title": "Qr Code",
+      "nom":"Name:",
+      "prenom": "First name:",
+      "age":"Age:",
+      "url1":"Enter your name",
+      "url2":"Enter your first name",
+      "url3":"Enter your age",
+      "bouton":"Create Qr Code"
+
+
     }
   }
