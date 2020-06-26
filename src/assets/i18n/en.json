@@ -37,5 +37,12 @@
       "bouton":"Create Qr Code"
 
 
+    },
+    "tabs":{
+      "tab1":"Analyzer",
+      "tab2":"Scanner",
+      "tab3":"Qr-Code",
+      "tab4":"Other"
     }
+    
   }

@@ -34,9 +34,13 @@
         "url2":"Entrer votre prénom",
         "url3":"Entrer votre âge",
         "bouton":"Créer un code QR"
+      },
   
-              
-     
+        "tabs":{
+          "tab1":"Analyseur",
+          "tab2":"Scanneur",
+          "tab3":"Code-Qr",
+          "tab4":"Autres"
 
       
     }
