@@ -1,0 +1,12 @@
+{
+    "tab1": {
+      "tabName": "Analysis",
+      "invite": "Now you have selected {{lang}}",
+      "languageChangePlaceholder": "Change language",
+      "boutonStart": "Start analysis",
+      "boutonStop":"Stop analysis",
+      "langue":"Language",
+      "fra": "French",
+      "eng": "English"
+    }
+  }

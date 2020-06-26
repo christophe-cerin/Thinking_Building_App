@@ -23,8 +23,14 @@ import { HTTP } from '@ionic-native/http/ngx';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { HttpModule } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
 import { BLE } from '@ionic-native/ble/ngx';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,8 +41,14 @@ import { BLE } from '@ionic-native/ble/ngx';
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    
-    
+    HttpClientModule,
+    TranslateModule.forRoot({ 
+      loader: { 
+        provide: TranslateLoader, 
+        useFactory: (createTranslateLoader),  
+        deps: [HttpClient] 
+      } 
+    }) 
   ],
   
   providers: [

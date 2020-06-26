@@ -1,0 +1,14 @@
+{
+    "tab1": {
+      "tabName": "Analyseur",
+      "invite": "Maintenant vous avez selectionné {{lang}}",
+      "languageChangePlaceholder": "Changer la langue",
+      "boutonStart": "Demarrer analyse",
+      "boutonStop":"Stopper analyse",
+      "langue":"Langage",
+      "fra": "Français",
+      "eng": "Anglais"
+    }
+    
+ 
+  }

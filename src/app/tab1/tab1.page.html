@@ -1,11 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title >
-      Analyseur
+      {{ 'tab1.tabName' | translate }}
     </ion-title>
   
 </ion-toolbar>
 </ion-header>
+
+
+
+
+  
+
 
 
   <!-- Default Toggle
@@ -39,15 +45,34 @@
 </ion-list>
 
 </ion-content>-->
+
+
+
 <ion-content>
+  
+  
     <div id="img_Logo_up13"><img src="./assets/img/univ-p13.jpg"/></div>
-</ion-content>
+
 <!-- Interface to start or stop ANALYZE with start/stop button-->
 <ion-content class="starting_interface">
   <!-- Start button-->
-
-  <ion-button expand="full" color="primary" (click)="presentAlertConfirmStartAnalyze()">Start analysis</ion-button>
+  
+  <ion-button expand="full" color="primary" (click)="presentAlertConfirmStartAnalyze()">{{ 'tab1.boutonStart' | translate }}</ion-button>
   <!-- Stop button-->
-  <ion-button expand="full" color="danger" (click)="stopAnalyze()">Stop analysis</ion-button>
+  <ion-button expand="full" color="danger" (click)="stopAnalyze()">{{ 'tab1.boutonStop' | translate }}</ion-button>
+  
+  <ion-card>
+    
+    <ion-card-content>
+      <p translate [translateParams]="{ lang: language }">tab1.invite</p>
+      <ion-item> 
+        <ion-label translate>{{ 'tab1.langue' | translate }}</ion-label>
+        <ion-select [(ngModel)]='language' (ionChange)='languageChange()' [placeholder]='"tab1.languageChangePlaceholder" | translate'>
+          <ion-select-option value='fr'>{{ 'tab1.fra' | translate }}</ion-select-option>
+          <ion-select-option value='en'>{{ 'tab1.eng' | translate }}</ion-select-option>
+        </ion-select>
+      </ion-item> 
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

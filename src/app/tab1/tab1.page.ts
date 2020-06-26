@@ -42,6 +42,9 @@ import {
 import {
     File
 } from '@ionic-native/file/ngx';
+import { 
+    TranslateService 
+} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-tab1',
@@ -49,18 +52,27 @@ import {
     styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+    [x: string]: any;
     var: any; //var to stock the interval
     lux: number;
     decibel: number;
     battery: number;
     private database: SQLiteObject;
     Rhttp: number;
+    private language: string = this.translateService.currentLang;
 
-    constructor(private sqlite: SQLite, private geolocation: Geolocation, private alertController: AlertController, private platform: Platform, private sensors: Sensors, private sensors1: Sensors, private dbMeter: DBMeter, private batteryStatus: BatteryStatus, private gyroscope: Gyroscope, private http: HTTP) {
+    constructor(private sqlite: SQLite, private geolocation: Geolocation, private alertController: AlertController, private platform: Platform, private sensors: Sensors, private sensors1: Sensors, private dbMeter: DBMeter, private batteryStatus: BatteryStatus, private gyroscope: Gyroscope, private http: HTTP, private translateService: TranslateService) {
         this.startDb();
         this.initializeDatabase();
         this.startBattery();
         this.sensors.enableSensor("LIGHT");
+        this.translateService.setTranslation('fr', { 
+            'tab1.getStarted': 'Commencer', 
+            'someProperty': 'Vous utilisez : {{var}}' 
+          });
+          this.translateService.get('someProperty', { var: 'classes' }).subscribe((res: string) => { 
+            this.someProperty = res; 
+          });
         this.presentAlert("Conditions générales d'utilisation","Client;tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales. Prestations et Services : https://application-récolte-up13.fr met à disposition des Clients : \
 Contenu : Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.\
 Informations clients : Ci après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par https://application-récolte-up13.fr pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques. \
@@ -319,7 +331,9 @@ Ce site internet est normalement accessible à tout moment aux utilisateurs. Une
         console.log("lux :" + lux, "gyro :" + gyro, "loc :" + loc, "deci :" + deci, "bat :" + bat, "time :" + time, "temp : " + temp);
     }
 
-
+    languageChange() {  
+        this.translateService.use(this.language);  
+      }
 
 
 }
