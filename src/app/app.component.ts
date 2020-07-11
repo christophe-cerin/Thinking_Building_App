@@ -28,7 +28,9 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.translate.setDefaultLang('fr');
+      this.translate.setDefaultLang('en');
+      this.translate.use('fr');
+      
     });
   }
 }
